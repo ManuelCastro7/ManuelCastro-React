@@ -1,16 +1,12 @@
 import './App.css';
+import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar.js';
 
 function App() {
   return (
     <div>
-      <header>
-        <h1>CompraGamer</h1>
-        <div className="container">
-          <button>Opcion 1</button>
-          <button>Opcion 2</button>
-          <button>Opcion 3</button>
-        </div>
-      </header>
+      <NavBar />
+      <ItemListContainer greeting="Bienvenido" />
     </div>
   );
 }
