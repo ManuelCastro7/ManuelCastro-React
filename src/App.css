@@ -1,23 +1,17 @@
 body{
   text-align: center;
 }
-
 header{
-  background-color: silver;
-  display: flex;
+  background-color: rgb(100, 100, 100);
   justify-content: space-between;
   padding: 25px;
+  display: flex;
+  align-items: center;
 }
 h1{
   color: #17C3B2;
   font-family: inherit;
 }
-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 
 
 
