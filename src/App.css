@@ -1,8 +1,9 @@
 body{
   text-align: center;
+  background-color: #252525;
 }
 header{
-  background-color: rgb(100, 100, 100);
+  background-color: slategray;
   justify-content: space-between;
   padding: 25px;
   display: flex;
@@ -11,6 +12,13 @@ header{
 h1{
   color: #17C3B2;
   font-family: inherit;
+}
+.add{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-bottom: 10px;
 }
 
 
@@ -44,6 +52,40 @@ a:hover {
 
 a:active {
   transform: scale(1.50);
+ } 
+.container{
+  margin: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 100px;
+}
+
+
+ /* Cards */
+.card{
+  background-color: white;
+  width: 225px;
+  box-shadow: 0px 0px 5px 5px #17C3B2;
+}
+ .card-img {
+  width: 100%;
+  border-radius: .5rem;
+  transition: .3s ease;
+ }
+ /*Button*/
+ .card-button {
+  border: 1px solid #17C3B2;
+  padding: .3em;
+  cursor: pointer;
+  transition: .3s ease-in-out;
  }
  
+ .card-button:hover {
+  border: 1px solid #17C3B2;
+  background-color: #17C3B2;
+ }
+
+
+
  

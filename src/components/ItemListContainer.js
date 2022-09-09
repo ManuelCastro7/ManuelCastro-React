@@ -1,6 +1,10 @@
+import Cards from "../containers/ItemCards";
+
 function ItemListContainer(props){
     return(
-        <h2>{props.greeting}</h2>
+        <div className="container">
+            <Cards />
+        </div>
     )
 }
 
