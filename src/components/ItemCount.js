@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Swal from 'sweetalert2'
 
-const Video = ({thumbnail, title, description}) => {
+const Cards = ({thumbnail, title, description}) => {
     const [rate, setRate] = useState(0);
     const handleRate1 = () => {
         if(rate<5){
@@ -41,4 +41,4 @@ const Video = ({thumbnail, title, description}) => {
     );
 }
 
-export default Video;
+export default Cards;
