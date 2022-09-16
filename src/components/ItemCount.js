@@ -1,20 +1,22 @@
-import { useState } from "react";
+import {useState } from 'react';
 import Swal from 'sweetalert2'
 
-const Cards = ({thumbnail, title, description}) => {
+const Count = () => {
+
     const [rate, setRate] = useState(0);
-    const handleRate1 = () => {
+
+    const increment = () => {
         if(rate<5){
             setRate(rate+1)
-        }else{
-            setRate(rate+0)
         }
     }
-    const handleRate2 = () => {
+
+    const decrement = () => {
         if(rate <=5 && rate >0){
             setRate(rate-1)
         }
     }
+    
     function add (){
         Swal.fire(
             '¡Lo agregaste al carrito!',
@@ -22,23 +24,14 @@ const Cards = ({thumbnail, title, description}) => {
             'success'
           )
     }
-
     return (
-        <div className="card">
-            <div>
-                <img className="card-img" src={thumbnail} alt="..." />
-            </div>
-            <div>
-                <h3>{title}</h3>
-                <p>{description}</p><hr></hr>
-                <div className="add">
-                    <button className="card-button" onClick={handleRate1}>+</button>{rate}
-                    <button className="card-button" onClick={handleRate2}>-</button>
-                    <button className="card-button" onClick={add}>Agregar</button>
-                </div>
-            </div>
+        <div className='add'>
+            <button className="card-button" onClick={decrement}>-</button>
+            {rate}
+            <button className="card-button" onClick={increment}>+</button>
+            <button className="card-button" onClick={add}>Agregar</button>
         </div>
     );
 }
 
-export default Cards;
+export default Count;

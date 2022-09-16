@@ -1,16 +1,18 @@
 body{
   text-align: center;
-  background-color: #252525;
+  background-image: url(./img/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 header{
-  background-color: slategray;
+  background-color: #17C3B2;
   justify-content: space-between;
   padding: 25px;
   display: flex;
   align-items: center;
 }
 h1{
-  color: #17C3B2;
+  color: black;
   font-family: inherit;
 }
 .add{
@@ -18,7 +20,6 @@ h1{
   justify-content: space-evenly;
   margin-left: 25px;
   margin-right: 25px;
-  padding-bottom: 10px;
 }
 
 
@@ -26,7 +27,7 @@ h1{
 /* Botones */
 a {
   padding: 0.4em 0.9em;
-  border: 2px solid #17C3B2;
+  border: 2px solid black;
   position: relative;
   overflow: hidden;
   background-color: transparent;
@@ -36,7 +37,7 @@ a {
   transition: .3s;
   z-index: 1;
   font-family: inherit;
-  color: #17C3B2;
+  color: black;
   text-decoration: none;
   margin-left: 10PX;
  }
@@ -46,8 +47,8 @@ a:hover::before {
  }
  
 a:hover {
-  color: #111;
-  background: #17C3B2;
+  color: #17C3B2;
+  background: black;
  }
 
 a:active {
@@ -67,12 +68,15 @@ a:active {
   background-color: white;
   width: 225px;
   box-shadow: 0px 0px 5px 5px #17C3B2;
+  padding-bottom: 10px;
 }
  .card-img {
   width: 100%;
   border-radius: .5rem;
   transition: .3s ease;
  }
+
+
  /*Button*/
  .card-button {
   border: 1px solid #17C3B2;
@@ -80,12 +84,76 @@ a:active {
   cursor: pointer;
   transition: .3s ease-in-out;
  }
- 
  .card-button:hover {
   border: 1px solid #17C3B2;
   background-color: #17C3B2;
  }
 
 
-
- 
+ /*Cargando*/
+.loader {
+  width: 25em;
+  height: 25em;
+  font-size: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  top: 200px;
+}
+.loader .face {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  animation: animate023845 2s linear infinite;
+}
+.loader .face:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  color: #17C3B2;
+  border-color: currentColor transparent transparent currentColor;
+  border-width: 0.2em 0.2em 0em 0em;
+  --deg: -45deg;
+  animation-direction: normal;
+}
+.loader .face:nth-child(2) {
+  width: 70%;
+  height: 70%;
+  color: lime;
+  border-color: currentColor currentColor transparent transparent;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  animation-direction: reverse;
+}
+.loader .face .circle {
+  position: absolute;
+  width: 50%;
+  height: 0.1em;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: rotate(var(--deg));
+  transform-origin: left;
+}
+.loader .face .circle::before {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 2em,
+                0 0 4em,
+                0 0 6em,
+                0 0 8em,
+                0 0 10em,
+                0 0 0 0.5em rgba(255, 255, 0, 0.1);
+}
+@keyframes animate023845 {
+  to {
+    transform: rotate(1turn);
+  }
+}
