@@ -5,7 +5,7 @@ body{
   background-repeat: no-repeat; 
 }
 header{
-  background-color: #17C3B2;
+  background-color: #00FFE8;
   justify-content: space-between;
   padding: 25px;
   display: flex;
@@ -15,11 +15,33 @@ h1{
   color: black;
   font-family: inherit;
 }
+h2{
+  color: #00FFE8;
+}
 .add{
+  color: white;
+  display: grid;
+  gap: 10px;
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 25px;
-  margin-right: 25px;
+  align-items: center;
+}
+.info{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoImage{
+  background-image: url(./img/pcgamer.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 639px;
+  width: 639px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
@@ -47,7 +69,7 @@ a:hover::before {
  }
  
 a:hover {
-  color: #17C3B2;
+  color: #00FFE8;
   background: black;
  }
 
@@ -65,32 +87,63 @@ a:active {
 
  /* Cards */
 .card{
-  background-color: white;
+  background-color: #00FFE8;
   width: 225px;
-  box-shadow: 0px 0px 5px 5px #17C3B2;
+  box-shadow: 0px 0px 5px 5px #00FFE8;
   padding-bottom: 10px;
+  transition: all 300ms;
+  opacity: 0.9;
 }
- .card-img {
+.card-img {
   width: 100%;
-  border-radius: .5rem;
+  border-radius: .8rem;
   transition: .3s ease;
  }
+ .card:hover {
+  transform: scale(1.10);
+  transition: all 500ms;
+ }
+
+.image{
+  background-image: url(./img/pcgamer.jpg);
+  background-size: cover;
+  background-position-y: -30px;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+ }
+ .objet1{
+  color: white;
+  align-items: flex-start;
+  position: relative;
+  bottom: 25px;
+  height: 35px;
+ }
+ .objet2{
+  align-self: flex-end;
+  color: white;
+  position: relative;
+  top: 20px;
+ }
 
 
- /*Button*/
- .card-button {
-  border: 1px solid #17C3B2;
-  padding: .3em;
+/*Buttons*/
+.card-button {
+  border: 1px solid #00FFE8;
+  padding: .5em;
   cursor: pointer;
-  transition: .3s ease-in-out;
- }
- .card-button:hover {
-  border: 1px solid #17C3B2;
-  background-color: #17C3B2;
- }
+  background-color: black;
+  color: #00FFE8;
+  font-size: 1rem;
+}
+.card-button:hover {
+  border: 1px solid black;
+  background-color: #00FFE8;
+  color: black;
+}
 
 
- /*Cargando*/
+ /*Loader*/
 .loader {
   width: 25em;
   height: 25em;
