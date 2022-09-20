@@ -1,14 +1,32 @@
 import React from "react";
+import Swal from 'sweetalert2'
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Item = ({product}) => {
+    const {id} = useParams();
+    function add (){
+        Swal.fire(
+            '¡Lo agregaste al carrito!',
+            '',
+            'success'
+          )
+    }
     return(
+        <div className="cards">
+            <img className="image" src={product.image} alt="product"/>
         <div className="card">
-            <div className="image">
-                <h2 className="objet1">{product.name}</h2>
-                <h2 className="objet2">{product.price}</h2>
+                <div className="card-top">
+                <h2 className="card__title">{product.name}</h2>
+            <div className="rating">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"></svg>
             </div>
-            <h2>Stock : {product.stock}</h2>
-            <button className="card-button">INFORMACION</button>
+            </div>
+                <div className="card__btns">
+                <button className="watch-btn" onClick={add}>Agregar</button>
+                <Link className="watch-btn" to={`/item/${id}`}>Detalles</Link>
+            </div>
+        </div>
         </div>
     )
 }

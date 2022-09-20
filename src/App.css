@@ -5,18 +5,20 @@ body{
   background-repeat: no-repeat; 
 }
 header{
-  background-color: #00FFE8;
+  background-color: #00b9ae;
   justify-content: space-between;
   padding: 25px;
   display: flex;
   align-items: center;
 }
-h1{
-  color: black;
-  font-family: inherit;
-}
 h2{
-  color: #00FFE8;
+  color: #00b9ae;
+}
+p{
+  color: #00b9ae;
+}
+.image{
+  height: 200px;
 }
 .add{
   color: white;
@@ -38,11 +40,6 @@ h2{
   height: 639px;
   width: 639px;
 }
-.details{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
 
 
@@ -63,84 +60,101 @@ a {
   text-decoration: none;
   margin-left: 10PX;
  }
- 
 a:hover::before {
   width: 105%;
  }
- 
 a:hover {
   color: #00FFE8;
   background: black;
  }
-
 a:active {
   transform: scale(1.50);
  } 
+
+
 .container{
   margin: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: 100px;
 }
 
 
  /* Cards */
-.card{
-  background-color: #00FFE8;
-  width: 225px;
-  box-shadow: 0px 0px 5px 5px #00FFE8;
-  padding-bottom: 10px;
-  transition: all 300ms;
-  opacity: 0.9;
-}
-.card-img {
-  width: 100%;
-  border-radius: .8rem;
-  transition: .3s ease;
- }
- .card:hover {
-  transform: scale(1.10);
-  transition: all 500ms;
- }
-
-.image{
-  background-image: url(./img/pcgamer.jpg);
-  background-size: cover;
-  background-position-y: -30px;
-  height: 10rem;
+.cards{
   display: flex;
-  justify-content: center;
+  background-color: white; 
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  width: 400px;
  }
- .objet1{
-  color: white;
-  align-items: flex-start;
-  position: relative;
-  bottom: 25px;
-  height: 35px;
- }
- .objet2{
-  align-self: flex-end;
-  color: white;
-  position: relative;
-  top: 20px;
- }
-
-
-/*Buttons*/
-.card-button {
-  border: 1px solid #00FFE8;
-  padding: .5em;
+.card {
+  --height: 210px;
+  --primary: #00b9ae;
+  --text: #f9f9f9b2;
+  --secondary: #f9f9f933;
+  --radius: 20px;
+  color: #fff;
+  background-color: white;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.card .card__title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.2rem;
+}
+.rating {
+  margin: 0%;
+  margin-top: 0.5em;
+  width: 85px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2217%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2217%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2017%2017%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M8.51948%201.625C9.1214%201.625%2010.0427%204.16625%2010.4636%205.43013C10.6014%205.8437%2010.9837%206.13054%2011.4192%206.14904C12.7373%206.20505%2015.375%206.39722%2015.375%207.0384C15.375%207.66696%2013.5161%209.17543%2012.5322%209.92976C12.1816%2010.1986%2012.0365%2010.6604%2012.1687%2011.082C12.5631%2012.34%2013.2755%2014.8755%2012.7573%2015.3009C12.2506%2015.717%2010.2147%2014.2326%209.15246%2013.4009C8.77021%2013.1016%208.22949%2013.1012%207.84719%2013.4004C6.78473%2014.2321%204.75246%2015.717%204.28166%2015.3009C3.79912%2014.8745%204.47615%2012.3275%204.84741%2011.0727C4.97086%2010.6555%204.82425%2010.2029%204.47885%209.93826C3.49798%209.18681%201.625%207.66933%201.625%207.0384C1.625%206.3962%204.2711%206.20444%205.5871%206.14878C6.0197%206.13048%206.3998%205.84769%206.53973%205.43793C6.97041%204.17673%207.91633%201.625%208.51948%201.625Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22%2300B9AE%22%0A%20%20%20%20%20%20%20%20%20%20%20%20stroke%3D%22%2300B9AE%22%0A%20%20%20%20%20%20%20%20%20%20%20%20stroke-width%3D%222%22%0A%20%20%20%20%20%20%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E");
+  background-repeat: space;
+}
+.card .card__info {
+  display: flex;
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--text);
+  font-weight: 400;
+  justify-content: space-between;
+}
+.card .card__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.card button {
+  border: none;
+  background: none;
   cursor: pointer;
-  background-color: black;
-  color: #00FFE8;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
 }
-.card-button:hover {
-  border: 1px solid black;
-  background-color: #00FFE8;
-  color: black;
+.card button:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
 }
+.card .add-btn {
+  color: #fff;
+  padding: 0.5em 0.8em;
+  border-radius: 14px;
+}
+.card .watch-btn {
+  flex: 1;
+}
+
 
 
  /*Loader*/
