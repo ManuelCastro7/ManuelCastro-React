@@ -24,7 +24,7 @@ const Item = ({product}) => {
             </div>
                 <div className="card__btns">
                 <button className="watch-btn" onClick={add}>Agregar</button>
-                <Link className="watch-btn" to={`/item/${id}`}>Detalles</Link>
+                <Link to={`/item/${id}`}>Detalles</Link>
             </div>
         </div>
         </div>

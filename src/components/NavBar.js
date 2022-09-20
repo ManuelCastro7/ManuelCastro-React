@@ -6,7 +6,7 @@ function NavBar(){
         <header>
           <Link to="/">GAMER-SHOP</Link>
           <div>
-            <Link to="category/1">Computadoras</Link>
+            <Link to="category/1">Notebooks</Link>
             <Link to="category/2">Joysticks</Link>
             <Link to="category/3">Monitores</Link>
           </div>

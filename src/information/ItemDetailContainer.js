@@ -1,5 +1,6 @@
 import DetailList from "../utils/Details";
 import ItemDetail from "./ItemDetail";
+import details from "../utils/Details";
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 
@@ -14,7 +15,7 @@ const ItemDetailContainer = () => {
         if(id){
             setLoading(true)
             DetailList ()
-            .then((detail) => setArrayList(detail.filter(detail => detail.Id === parseInt(id))))
+            .then((detail) => setArrayList(details.filter(detail => detail.id === parseInt(id))))
             .catch((err) => console.error(err))
             .finally(() => setLoading(false))
         }else{

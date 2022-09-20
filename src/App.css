@@ -67,9 +67,6 @@ a:hover {
   color: #00FFE8;
   background: black;
  }
-a:active {
-  transform: scale(1.50);
- } 
 
 
 .container{
@@ -132,19 +129,25 @@ a:active {
   gap: 0.6rem;
 }
 .card button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  background: var(--primary);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: 0.2s;
+  padding: 0.4em 0.9em;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: black;
+  text-decoration: none;
+  margin-left: 10PX;
 }
 .card button:hover {
-  opacity: 0.8;
-  transform: scale(0.9);
+  color: #00FFE8;
+  background: black;
+  cursor: pointer;
 }
 .card .add-btn {
   color: #fff;
