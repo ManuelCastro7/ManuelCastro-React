@@ -28,17 +28,10 @@ p{
   align-items: center;
 }
 .info{
-  background-color: black;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.infoImage{
-  background-image: url(./img/pcgamer.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 639px;
-  width: 639px;
 }
 
 

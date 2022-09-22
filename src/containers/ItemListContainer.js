@@ -1,11 +1,11 @@
-import DetailList from "../utils/Details";
-import ItemDetail from "./ItemDetail";
-import details from "../utils/Details";
+import productList from "../utils/productList";
+import products from "../utils/Products"
 import React, {useEffect, useState} from "react";
+import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = () => {
-  
+const ItemListContainer = () => {
+
     const [arrayList, setArrayList] = useState([]);
     const [loading, setLoading] = useState(false);
     const {id} = useParams();
@@ -14,13 +14,13 @@ const ItemDetailContainer = () => {
 
         if(id){
             setLoading(true)
-            DetailList ()
-            .then((detail) => setArrayList(details.filter(detail => detail.id === parseInt(id))))
+            productList ()
+            .then((response) => setArrayList(products.filter(product => product.categoryId === parseInt(id))))
             .catch((err) => console.error(err))
             .finally(() => setLoading(false))
         }else{
             setLoading(true)
-            DetailList ()
+            productList ()
             .then((response) => setArrayList(response))
             .catch((err) => console.error(err))
             .finally(() => setLoading(false))
@@ -38,9 +38,9 @@ const ItemDetailContainer = () => {
                     <div className="circle"></div>
                 </div>
             </div>
-            :<ItemDetail details={arrayList}/>}
+            :<ItemList products={arrayList}/>}
         </div>
     )
 }
 
-export default ItemDetailContainer;
+export default ItemListContainer;
