@@ -1,21 +1,24 @@
 import Count from "./ItemCount";
 
-const ItemDetail = ({ item, add }) => {
+const ItemDetail = ({ item}) => {
     
     return (
         <>
-            <div className="info">
-                <div>
-                    <img src={item.image} alt="..."></img>
-                </div>
-                <div className="details">
-                    <h2>{item.name}</h2>
-                    <h2>PROCESADOR : {item.processor}</h2>
-                    <h2>GPU : {item.gpu}</h2>
-                    <h2>MEMORIA RAM : {item.ram}</h2>
-                    <h2>STOCK : {item.stock}</h2>
-                    <h2>PRECIO : {item.price}</h2>
-                    <Count/>
+            <div className="itemDetail">
+                <h2>{item.name}</h2>
+                <div className="info">
+                    <div>
+                        <img src={item.image} alt="..."></img>
+                    </div>
+                    <div className="details">
+                        <h3>✔️Pantalla : {item.screen}</h3>
+                        <h3>✔️Procesador : {item.processor}</h3>
+                        <h3>✔️Almacenamiento : {item.memory}</h3>
+                        <h3>✔️Memoria : {item.ram}</h3>
+                        <h3>✔️Stock : {item.stock}</h3>
+                        <h3>✔️Precio : {item.price}</h3>
+                        <Count/>
+                    </div>
                 </div>
             </div>
         </>

@@ -19,11 +19,16 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <div>
             {loading? 
-            <div className="loader"></div>
-            :<ItemDetail item={dato} />}
+            <div className="loader">
+            <div className="face">
+                <div className="circle"></div>
+            </div>
+            <div className="face">
+                <div className="circle"></div>
+            </div>
         </div>
+            :<ItemDetail item={dato} />}
         </div>
     )
 }
