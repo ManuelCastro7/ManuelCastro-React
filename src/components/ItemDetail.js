@@ -1,13 +1,23 @@
 import ItemCount from "./ItemCount";
-import { useState } from "react"
+import React, { useContext} from 'react';
 import { Link } from "react-router-dom";
+import { cartContext } from "../context/CartContextProvider";
 
 const ItemDetail = ({item}) => {
-    const [itemCount, setItemCount] = useState(0);
+    const { addToCart, isInCart, deleteItem } = useContext(cartContext);
 
-    const onAdd = (cantidad) => {
-        setItemCount(cantidad)
-    }
+
+  const onAdd = (count) => {
+    console.log(`Agregaste ${item.name}, cantidad: ${count}.`);
+    addToCart(item, count);
+  }
+
+  if (!item.id) return (
+    <div>
+      <p>Error, 404 not found.</p>
+      <p>Try later.</p>
+    </div>
+  )
     return (
         <>
             <div className="itemDetail">
@@ -22,12 +32,16 @@ const ItemDetail = ({item}) => {
                         <h3>✔️Almacenamiento : {item.memory}</h3>
                         <h3>✔️Memoria : {item.ram}</h3>
                         <h3>✔️Stock : {item.stock}</h3>
-                        <h3>✔️Precio : {item.price}</h3>
-                        {
-                        itemCount === 0
-                            ? <ItemCount initial={itemCount} stock={item.stock} onAdd={onAdd} />
-                            : <Link to="/cart">Ver en el carrito</Link>
+                        <h3>✔️Precio : ${item.price}</h3>
+                        {isInCart(item.id) ?
+                            <div>
+                                <p>Already in cart</p>
+                                <button className="watch-btn" onClick={() => deleteItem(item.id)}>Delete from cart</button>
+                            </div>
+                            :
+                            <p>Add now!</p>
                         }
+                        {(isInCart(item.id)) ? <Link to="/cart" >Go to Cart</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
                     </div>
                 </div>
             </div>
