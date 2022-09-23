@@ -81,7 +81,7 @@ const products = [
       ram:"16GB DDR4",
       price:"$510.000",
       stock: 5,
-      image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30646_Notebook_Gamer_AORUS_XD_15.6__Core_I7_11800H_16GB__2x8GB__1TB_SSD_NVMe_RTX_3070_240Hz_W11_Home_40f94c0d-med.jpg"
+      image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30646_Notebook_Gamer_AORUS_XD_15.6__Core_I7_11800H_16GB__2x8GB__1TB_SSD_NVMe_RTX_3070_240Hz_W11_Home_40f94c0d-grn.jpg"
     },
     {
       id: 8,
