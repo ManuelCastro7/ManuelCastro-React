@@ -5,7 +5,7 @@ function NavBar(){
     return(
         <header>
           <Link to="/">GAMER-SHOP</Link>
-          <div>
+          <div className="navBar">
             <Link to="category/1">ASUS</Link>
             <Link to="category/2">ACER</Link>
             <Link to="category/3">OTRO</Link>

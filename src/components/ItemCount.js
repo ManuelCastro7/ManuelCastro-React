@@ -15,7 +15,7 @@ function ItemCount({ stock, initial, onAdd }) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: `Se ha alcanzado el maximo de ${stock} unidades`
+            text: `Se ha alcanzado el maximo de stock`
           })
     }
     function error2(){
@@ -23,6 +23,13 @@ function ItemCount({ stock, initial, onAdd }) {
             icon: 'error',
             title: 'Oops...',
             text: "No se puede disminuir de 0 unidades"
+          })
+    }
+    function error3(){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: "No has agregado unidades"
           })
     }
 
@@ -46,7 +53,7 @@ function ItemCount({ stock, initial, onAdd }) {
             setRate(1);
             onAdd(rate)
         } else {
-            alert("Cantidad no valida")
+            error3()
             setRate(1);
         }
     }

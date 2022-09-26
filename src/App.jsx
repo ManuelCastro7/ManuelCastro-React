@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './components/NavBar.js';
+import NavBar from './components/NavBar';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import CartProvider from './context/CartContextProvider';

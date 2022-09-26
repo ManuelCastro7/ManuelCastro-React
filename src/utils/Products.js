@@ -7,7 +7,7 @@ const products = [
       processor:"intel core i5",
       memory:"512GB SSD",
       ram:"8GB DDR4",
-      price: 165.000,
+      price: 165000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_34281_Notebook_Acer_Aspire_3_15.6__Core_I5_1035G1_8GB_512GB_SSD_NVMe_GeForce_MX330_Freedos_83d3e168-grn.jpg"
     },
@@ -19,7 +19,7 @@ const products = [
       processor:"AMD RYZEN 7",
       memory:"512GB NVME M.2",
       ram:"16GB DDR4",
-      price: 425.000,
+      price: 425000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30568_Notebook_Gamer_ASUS_ROG_ZEPHYRUS_G14_14__Ryzen_7_5800HS_16GB__2x8GB__512GB_SSD_RTX_3050_144Hz_W10_ANIME_MATRIX_5d444937-med.jpg"
     },
@@ -31,7 +31,7 @@ const products = [
       processor:"INTEL CORE I7",
       memory:"512GB SSD",
       ram:"8GB DDR4",
-      price: 350.000,
+      price: 350000,
       stock: 2,
       image:"https://static.acer.com/up/Resource/Acer/Laptops/Porsche_Design_Acer_Book_RS/Images/20220612/Porsche-Design-Acer-Book-RS-AP714-51-modelpreview.png"
     },
@@ -43,7 +43,7 @@ const products = [
       processor:"INTEL CORE I5",
       memory:"1TB HDD",
       ram:"8GB DDR4",
-      price: 240.000,
+      price: 240000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_31309_Notebook_Gamer_Acer_NITRO_5_15.6__Core_I5_10300H_8GB_1TB_HDD_GTX1650_W11_Home_b12c2cc8-grn.jpg"
     },
@@ -55,7 +55,7 @@ const products = [
       processor:"INTEL CORE I7",
       memory:"512GB SSD",
       ram:"8GB DDR4",
-      price: 270.000,
+      price: 270000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_31999_Notebook_Lenovo_ThinkPad_L14_Gen2_14__Core_I7_1165G7_8GB_512GB_SSD_NVMe_W10_PRO_88a7975b-grn.jpg"
     },
@@ -67,7 +67,7 @@ const products = [
       processor:"INTEL CORE I7",
       memory:"512GB NVME M.2",
       ram:"8GB DDR4",
-      price: 300.000,
+      price: 300000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_31192_Notebook_ASUS_ZENBOOK_FLIP_TOUCH_OLED_4K_13.3__Core_I5_1135G7_8GB_1TB_SSD_NVMe_W10_2d9ce0d4-grn.jpg"
     },
@@ -79,7 +79,7 @@ const products = [
       processor:"AMD RYZEN 7",
       memory:"1TB NVME M.2",
       ram:"16GB DDR4",
-      price: 510.000,
+      price: 510000,
       stock: 5,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30646_Notebook_Gamer_AORUS_XD_15.6__Core_I7_11800H_16GB__2x8GB__1TB_SSD_NVMe_RTX_3070_240Hz_W11_Home_40f94c0d-grn.jpg"
     },
@@ -91,7 +91,7 @@ const products = [
       processor:"AMD RYZEN 7",
       memory:"512GB NVME M.2",
       ram:"16GB DDR4",
-      price: 450.000,
+      price: 450000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30650_Notebook_Gamer_AORUS_KD_15.6__Core_I7_11800H_16GB__2x8GB__512GB_SSD_NVMe_RTX_3060_240Hz_W11_02c902ce-grn.jpg"
     },

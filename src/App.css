@@ -11,6 +11,9 @@ header{
   display: flex;
   align-items: center;
 }
+footer{
+  background-color: #32de84;
+}
 h2{
   color: black;
   margin: 0%;
@@ -167,6 +170,10 @@ a:hover {
 .card .watch-btn {
   flex: 1;
 }
+.boton-compra{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
@@ -237,9 +244,4 @@ a:hover {
   to {
     transform: rotate(1turn);
   }
-}
-
-
-.carrito{
-  
 }

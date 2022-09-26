@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../context/CartContextProvider";
 
 const ItemDetail = ({item}) => {
-    const { addToCart, isInCart, deleteItem } = useContext(cartContext);
+    const { addToCart, isInCart} = useContext(cartContext);
 
 
   const onAdd = (count) => {
@@ -15,7 +15,6 @@ const ItemDetail = ({item}) => {
   if (!item.id) return (
     <div>
       <p>Error, 404 not found.</p>
-      <p>Try later.</p>
     </div>
   )
     return (
@@ -33,15 +32,14 @@ const ItemDetail = ({item}) => {
                         <h3>✔️Memoria : {item.ram}</h3>
                         <h3>✔️Stock : {item.stock}</h3>
                         <h3>✔️Precio : ${item.price}</h3>
-                        {isInCart(item.id) ?
-                            <div>
-                                <p>Already in cart</p>
-                                <button className="watch-btn" onClick={() => deleteItem(item.id)}>Delete from cart</button>
-                            </div>
-                            :
-                            <p>Add now!</p>
-                        }
-                        {(isInCart(item.id)) ? <Link to="/cart" >Go to Cart</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
+                        <div>
+                            {isInCart(item.id) ?
+                                    <p>Se agrego este producto!</p>
+                                :
+                                <p>Agregalo al carrito!</p>
+                            }
+                            {(isInCart(item.id)) ? <Link to="/cart" >Ir al carrito</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
+                        </div>
                     </div>
                 </div>
             </div>
