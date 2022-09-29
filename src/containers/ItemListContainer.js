@@ -14,7 +14,7 @@ const ItemListContainer = () => {
 
             let q
             if(id){
-                q = query(collection(db, "products")), where("categoryId", "==", id)
+                q = query(collection(db, "products"), where("categoryId", "==", id))
             }else{
                 q = query(collection(db, "products"))
             }
