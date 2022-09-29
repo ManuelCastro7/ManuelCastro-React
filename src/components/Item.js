@@ -18,7 +18,6 @@ const Item = ({product}) => {
                 <div className="card-top">
                     </div>
                     <div className="card__btns">
-                    <button className="watch-btn" onClick={add} >Agregar</button>
                     <Link to={"/item/"+product.id}>Detalles</Link>
                 </div>
             </div>

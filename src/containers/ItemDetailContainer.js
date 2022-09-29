@@ -3,6 +3,7 @@ import CustomFetch from "../utils/CustomFetch";
 import products from "../utils/Products";
 import ItemDetail from "../components/ItemDetail"
 import { useParams } from "react-router-dom";
+import { db } from "../utils/FirebaseConfig"
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({})

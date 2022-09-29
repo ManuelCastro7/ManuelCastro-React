@@ -4,7 +4,7 @@ const products = [
       categoryId: 2,
       name:"ACER ASPIRE",
       screen:"15´ 1920x1080 60HZ",
-      processor:"intel core i5",
+      processor:"INTEL CORE i5",
       memory:"512GB SSD",
       ram:"8GB DDR4",
       price: 165000,
