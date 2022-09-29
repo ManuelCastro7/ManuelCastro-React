@@ -80,7 +80,7 @@ const products = [
       memory:"1TB NVME M.2",
       ram:"16GB DDR4",
       price: 510000,
-      stock: 5,
+      stock: 1,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30646_Notebook_Gamer_AORUS_XD_15.6__Core_I7_11800H_16GB__2x8GB__1TB_SSD_NVMe_RTX_3070_240Hz_W11_Home_40f94c0d-grn.jpg"
     },
     {
@@ -90,7 +90,7 @@ const products = [
       screen:"14´ 1920x1080 240HZ",
       processor:"AMD RYZEN 7",
       memory:"512GB NVME M.2",
-      ram:"16GB DDR4",
+      ram:"512GB NVME M.2",
       price: 450000,
       stock: 3,
       image:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30650_Notebook_Gamer_AORUS_KD_15.6__Core_I7_11800H_16GB__2x8GB__512GB_SSD_NVMe_RTX_3060_240Hz_W11_02c902ce-grn.jpg"

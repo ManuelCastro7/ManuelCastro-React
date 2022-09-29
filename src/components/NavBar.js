@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 function NavBar(){
     return(
         <header>
-          <Link to="/">GAMER-SHOP</Link>
-          <div className="navBar">
+          <div>
+            <Link to="/" className="logo"><img src="https://img.icons8.com/nolan/96/2AF598/009EFD/broken-computer.png" alt="Logo"/><h1>GAME-SHOP</h1></Link>
+          </div>
+          <div className="links">
             <Link to="category/1">ASUS</Link>
             <Link to="category/2">ACER</Link>
             <Link to="category/3">OTRO</Link>
@@ -16,4 +18,3 @@ function NavBar(){
   }
 
   export default NavBar;
-

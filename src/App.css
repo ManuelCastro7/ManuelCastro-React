@@ -1,18 +1,26 @@
 body{
   text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat; 
 }
 header{
-  background-color: #00FFE8;
+  
+  background-image: url(../src/img/fondo3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -10px;
   border-bottom: black solid 0.2em;
   justify-content: space-between;
   padding: 25px;
   display: flex;
   align-items: center;
 }
-footer{
-  background-color: #32de84;
+.logo{
+  display: flex;
+  align-items: center;
+  color: #00FFE8;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  text-shadow: black 5px 0px 5px;
 }
 h2{
   color: black;
@@ -85,7 +93,7 @@ p{
 
 
 /* Botones */
-a {
+.links a {
   padding: 0.4em 0.9em;
   border: 2px solid black;
   position: relative;
@@ -102,10 +110,10 @@ a {
   margin-left: 10PX;
   font-weight: bold;
  }
-a:hover::before {
+.links a:hover::before {
   width: 105%;
  }
-a:hover {
+.links a:hover {
   color: #00FFE8;
   background: black;
  }
@@ -189,6 +197,7 @@ a:hover {
 
  /*Loader*/
 .loader {
+  top: 125px;
   width: 25em;
   height: 25em;
   font-size: 10px;
@@ -197,7 +206,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin: auto;
-  top: 200px;
 }
 .loader .face {
   position: absolute;

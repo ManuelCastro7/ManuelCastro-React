@@ -2,6 +2,7 @@ import ItemCount from "./ItemCount";
 import React, { useContext} from 'react';
 import { Link } from "react-router-dom";
 import { cartContext } from "../context/CartContextProvider";
+import Loading from "./Loading";
 
 const ItemDetail = ({item}) => {
     const { addToCart, isInCart} = useContext(cartContext);
@@ -14,7 +15,7 @@ const ItemDetail = ({item}) => {
 
   if (!item.id) return (
     <div>
-      <p>Error, 404 not found.</p>
+      <Loading></Loading>
     </div>
   )
     return (
@@ -32,7 +33,7 @@ const ItemDetail = ({item}) => {
                         <h3>✔️Memoria : {item.ram}</h3>
                         <h3>✔️Stock : {item.stock}</h3>
                         <h3>✔️Precio : ${item.price}</h3>
-                        <div>
+                        <div className="links">
                             {isInCart(item.id) ?
                                     <p>Se agrego este producto!</p>
                                 :
