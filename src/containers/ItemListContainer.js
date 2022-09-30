@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ItemList from "../components/ItemList";
+import Loading from "../components/Loading";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../utils/FirebaseConfig"
@@ -8,13 +9,15 @@ const ItemListContainer = () => {
 
     const [arrayList, setArrayList] = useState([]);
     const {id} = useParams();
+    const [loadingPage, setLoadingPage] = useState(false)
 
     useEffect(() => {
         const firestoreFetch = async() =>{
 
+            setLoadingPage(true)
             let q
             if(id){
-                q = query(collection(db, "products"), where("categoryId", "==", id))
+                q = query(collection(db, "products"), where("categoryId", "==", parseInt(id)))
             }else{
                 q = query(collection(db, "products"))
             }
@@ -27,12 +30,13 @@ const ItemListContainer = () => {
         }
         firestoreFetch()
         .then(result => setArrayList(result))
+        .finally(() => setLoadingPage(false))
     }, [id])
 
 
     return(
         <div>
-            <ItemList products={arrayList}/>
+            {loadingPage ? <Loading/> : <ItemList products={arrayList}/>}
         </div>
     )
 }
