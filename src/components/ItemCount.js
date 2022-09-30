@@ -63,7 +63,7 @@ function ItemCount({ stock, initial, onAdd }) {
             <button className="card-button" onClick={decrement}>-</button>
             {rate}
             <button className="card-button" onClick={increment}>+</button>
-            <button className="card-button" onClick={add}>Agregar</button>
+            <button className="card-button" onClick={add}>AGREGAR</button>
         </div>
     );
 }

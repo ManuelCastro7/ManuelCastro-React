@@ -5,7 +5,7 @@ import { cartContext } from "../context/CartContextProvider";
 import Loading from "./Loading";
 
 const ItemDetail = ({item}) => {
-    const { addToCart, isInCart} = useContext(cartContext);
+    const { addToCart, isInCart, deleteItem } = useContext(cartContext);
 
 
   const onAdd = (count) => {
@@ -35,11 +35,11 @@ const ItemDetail = ({item}) => {
                         <h3>✔️Precio : ${item.price}</h3>
                         <div className="links">
                             {isInCart(item.id) ?
-                                    <p>Se agrego este producto!</p>
+                                <button className="card-button" onClick={() => deleteItem(item.id)}>ELIMINAR</button>   
                                 :
                                 <p>Agregalo al carrito!</p>
                             }
-                            {(isInCart(item.id)) ? <Link to="/cart" >Ir al carrito</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
+                            {(isInCart(item.id)) ? <Link to="/cart" >carrito</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
                         </div>
                     </div>
                 </div>

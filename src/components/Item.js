@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Item = ({product}) => {
+
     return(
         <div className="cards">
             <h2 className="card__title">{product.name}</h2>
@@ -10,7 +11,7 @@ const Item = ({product}) => {
                 <div className="card-top">
                     </div>
                     <div className="card__btns links">
-                    <Link to={"/item/"+product.id}>Detalles</Link>
+                    <Link to={"/item/"+product.id}>ver detalles</Link>
                 </div>
             </div>
         </div>
