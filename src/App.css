@@ -53,12 +53,13 @@ p{
 }
 .badge {
   background-color: black;
-    padding: 0.25rem;
-    color: white;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    color: #32de84;
     font-weight: bold;
     position: absolute;
-    right: 25px;
-    top: 35px;
+    right: 40px;
+    top: 60px;
 }
 .card-button{
   background: black;
@@ -74,7 +75,7 @@ p{
   color: black;
 }
 .card-button:hover {
-  color: #00FFE8;
+  color: #32de84;
   background: black;
   cursor: pointer;
 }
@@ -115,7 +116,7 @@ p{
   width: 105%;
  }
 .links a:hover {
-  color: #00FFE8;
+  color: #32de84;
   background: black;
  }
 
@@ -135,7 +136,7 @@ p{
   
  }
  .cards:hover {
-  border: #00FFE8 0.2em solid;
+  border: #32de84 0.2em solid;
   scale: 10px;
  }
  .cards:hover {
@@ -176,7 +177,7 @@ p{
   font-weight: bold;
 }
 .card button:hover {
-  color: #00FFE8;
+  color: #32de84;
   background: black;
   cursor: pointer;
 }

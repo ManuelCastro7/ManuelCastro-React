@@ -9,7 +9,6 @@ const ItemDetail = ({item}) => {
 
 
   const onAdd = (count) => {
-    console.log(`Agregaste ${item.name}, cantidad: ${count}.`);
     addToCart(item, count);
   }
 
@@ -34,12 +33,8 @@ const ItemDetail = ({item}) => {
                         <h3>✔️Stock : {item.stock}</h3>
                         <h3>✔️Precio : ${item.price}</h3>
                         <div className="links">
-                            {isInCart(item.id) ?
-                                <button className="card-button" onClick={() => deleteItem(item.id)}>ELIMINAR</button>   
-                                :
-                                <p>Agregalo al carrito!</p>
-                            }
-                            {(isInCart(item.id)) ? <Link to="/cart" >carrito</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
+                            {isInCart(item.id) ? <button className="card-button" onClick={() => deleteItem(item.id)}>ELIMINAR</button> : <p></p>}
+                            {isInCart(item.id) ? <Link to="/cart" >carrito</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />}
                         </div>
                     </div>
                 </div>

@@ -4,13 +4,6 @@ import Swal from 'sweetalert2'
 function ItemCount({ stock, initial, onAdd }) {
     const [rate, setRate] = useState(initial);
 
-    function bought (){
-        Swal.fire(
-            '¡Lo agregaste al carrito!',
-            '',
-            'success'
-          )
-    }
     function error1(){
         Swal.fire({
             icon: 'error',
@@ -49,7 +42,6 @@ function ItemCount({ stock, initial, onAdd }) {
     }
     const add = () => {
         if (rate !== 0) {
-            bought()
             setRate(1);
             onAdd(rate)
         } else {
