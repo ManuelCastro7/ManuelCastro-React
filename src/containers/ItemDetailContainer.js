@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {products.length > 0 ?<ItemDetail item={dato}/>:<Loading></Loading>}
+            {products.length > 0 ?<ItemDetail item={dato}/>:<Loading/>}
         </div>
     )
 }
