@@ -4,9 +4,8 @@ body{
   margin: 0%;
 }
 header{
-  background-image: url(../src/img/fondo3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(255,255,255,1) 100%);
   background-position: 0px;
   border-bottom: black solid 0.2em;
   justify-content: space-between;
@@ -17,11 +16,14 @@ header{
 .logo{
   display: flex;
   align-items: center;
-  color: #00FFE8;
   padding-left: 5px;
   padding-right: 5px;
   text-decoration: none;
+}
+h1{
+  text-decoration: none;
   text-shadow: black 5px 0px 5px;
+  color: #32de84;
 }
 h2{
   color: black;

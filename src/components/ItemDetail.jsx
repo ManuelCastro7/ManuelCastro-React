@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
     return (
         <>
             <div className="itemDetail">
-                <h2>{item.name}</h2>
+                <h1>{item.name}</h1>
                 <div className="info">
                     <div>
                         <img src={item.image} alt="..."></img>
