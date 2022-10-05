@@ -5,7 +5,7 @@ function NavBar(){
     return(
         <header>
           <div>
-            <Link to="/" className="logo"><img src="https://img.icons8.com/nolan/96/2AF598/009EFD/broken-computer.png" alt="Logo"/><h1>GAME-SHOP</h1></Link>
+            <Link to="/" className="logo"><h1>NOTE</h1><img src="https://img.icons8.com/nolan/96/2AF598/009EFD/broken-computer.png" alt="Logo"/><h1>SHOP</h1></Link>
           </div>
           <div className="links">
             <Link to="category/1">ASUS</Link>
