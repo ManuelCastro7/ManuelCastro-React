@@ -45,15 +45,15 @@ const Cart = () => {
     <>
       {cart.length === 0 ?
         <div className='links'>
-          <h1>Carrito vacio</h1>
+          <h2>Carrito vacio</h2>
           <Link to='/'>seguir comprando</Link>
         </div>
         :
-        <div className='card'>
+        <div>
           {cart.map(element => <ItemCart key={element.item.id} prod={element} />)}
-          <button>Total : ${totalProductsPrice()}</button>
-          <button onClick={createOrder}>Crear orden de compra</button>
-          <button onClick={() => clearCart()}>Borrar todo</button>
+          <h4>Total : ${totalProductsPrice()}</h4>
+          <button onClick={createOrder}>ORDEN DE COMPRA</button><br></br><br></br>
+          <button onClick={() => clearCart()}>VACIAR EL CARRITO</button>
         </div>
       }
     </>

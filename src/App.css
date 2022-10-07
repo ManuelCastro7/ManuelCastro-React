@@ -1,6 +1,5 @@
 body{
   text-align: center;
-  background: url(./img/background.jpg);
   margin: 0%;
 }
 header{
@@ -13,6 +12,13 @@ header{
   display: flex;
   align-items: center;
 }
+.info{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 135px;
+}
 .logo{
   display: flex;
   align-items: center;
@@ -22,13 +28,21 @@ header{
 }
 h1{
   text-decoration: none;
-  text-shadow: black 5px 0px 5px;
   color: #32de84;
 }
 h2{
+  text-decoration: none;
+  color: black;
+}
+h3{
   color: black;
   margin: 0%;
   padding-top: 10px;
+}
+h4{
+  color: #32de84;
+  font-weight: bold;
+  font-size: 25px;
 }
 p{
   color: #00b9ae;
@@ -46,70 +60,82 @@ p{
   background-color: white;
   padding-top: 100px;
 }
-.add{
-  color: black;
-  display: grid;
-  gap: 10px;
-  display: flex;
-  align-items: center;
-}
-.badge {
-  background-color: black;
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
-    color: #32de84;
-    font-weight: bold;
-    position: absolute;
-    right: 40px;
-    top: 60px;
-}
-.card-button{
-  background: black;
-  cursor: pointer;padding: 0.4em 0.9em;
-  border: 2px solid black;
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: inherit;
-  color: black;
-}
-.card-button:hover {
-  color: #32de84;
-  background: black;
-  cursor: pointer;
-}
 .details{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.info{
-  background-color: white;
+
+.cart-items{
   display: flex;
+  gap: 50px;
   align-items: center;
-  justify-content: space-evenly;
-  padding-bottom: 135px;
+  background-color: white;
+  border: black 0.2em solid;
+  margin-bottom: 2em;
 }
 
 
 
-/* Botones */
+/*Number of items in cart*/
+.badge {
+  background-color: black;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  right: 40px;
+  top: 60px;
+}
+
+
+
+/*Item´s add*/
+.add{
+  display: grid;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Card´s buttons*/
+button{
+  cursor: pointer;padding: 0.4em 0.9em;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: inherit;
+  color: white;
+}
+button:hover {
+  color: black;
+  background: #32de84;
+  cursor: pointer;
+}
+
+
+
+/* Navbar´s buttons*/
 .links a {
   padding: 0.4em 0.9em;
   border: 2px solid black;
   position: relative;
   overflow: hidden;
-  background-color: transparent;
+  background-color: black;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   transition: .3s;
   z-index: 1;
   font-family: inherit;
-  color: black;
+  color: white;
   text-decoration: none;
   margin-left: 10PX;
   font-weight: bold;
@@ -118,8 +144,8 @@ p{
   width: 105%;
  }
 .links a:hover {
-  color: #32de84;
-  background: black;
+  color: black;
+  background: #32de84;
  }
 
 
@@ -135,7 +161,6 @@ p{
   transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: black 0.2em solid;
   transition: all 0.5s ease;
-  
  }
  .cards:hover {
   border: #32de84 0.2em solid;
@@ -167,20 +192,20 @@ p{
   border: 2px solid black;
   position: relative;
   overflow: hidden;
-  background-color: transparent;
+  background-color: black;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   transition: .3s;
   z-index: 1;
   font-family: inherit;
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 .card button:hover {
-  color: #32de84;
-  background: black;
+  color: black;
+  background: #32de84;
   cursor: pointer;
 }
 .card .add-btn {
@@ -195,7 +220,6 @@ p{
   display: flex;
   flex-direction: column;
 }
-
 
 
 

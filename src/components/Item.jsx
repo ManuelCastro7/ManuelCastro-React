@@ -8,10 +8,8 @@ const Item = ({product}) => {
             <h2 className="card__title">{product.name}</h2>
             <img className="image" src={product.image} alt="product"/>
             <div className="card">
-                <div className="card-top">
-                    </div>
-                    <div className="card__btns links">
-                    <Link to={"/item/"+product.id}>ver detalles</Link>
+                <div>
+                    <Link to={"/item/"+product.id}><button>ver detalles</button></Link>
                 </div>
             </div>
         </div>
